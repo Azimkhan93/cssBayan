@@ -1,0 +1,75 @@
+body {
+  background-color: bisque;
+}
+
+.core-box {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+section{
+  border-top: 2px solid grey;
+}
+
+.meme-content{
+  width: 390px; 
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+img{
+  height: auto;
+}
+
+i {
+  font-size: 18px;
+  float: right;
+}
+
+.meme-content img {
+  height: 0;
+  transition: height 0.5s;
+  transition-timing-function: linear;
+}
+
+/* .meme-content.default img {
+  height: 350px
+} */
+
+input:checked ~ .meme-content img
+{
+  height: 350px
+}
+
+input:checked,
+#s-one[checked] .meme-content img {
+  height: 0;
+  transition: height 0.5s;
+  transition-timing-function: linear;
+}
+
+.meme-unit:hover .meme-content img{
+  height: 350px;
+  transition: height 0.5s;
+  transition-timing-function: linear;
+  overflow: hidden;
+}
+
+.meme-unit span.i-close,
+.meme-unit:hover span.i-plus {
+  display: none;
+}
+
+.meme-unit:hover span.i-close,
+.meme-unit span.i-plus {
+  display: inline;
+}
+
+
+
+input[type=radio] {
+ appearance: none;
+}
+
+
