@@ -1,0 +1,184 @@
+/* Mobile  up to 767 px*/
+
+@media screen and (max-width: 767px) and (hover: none){
+  /* General css */
+  h1{
+    font-size: 1.4rem;
+  }
+
+  .meme-container {
+    font-size: 0.9rem;
+  }
+
+  .core-box {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  i {
+    font-size: 0.9rem;
+  }
+
+  /* showing icons on cursor */
+  
+  .meme-container > .meme-unit .i-plus {
+    display: inline;
+  }
+  
+  /* Choosing image expanded */
+  input:checked ~ label .meme-content img
+  {
+    width: auto;
+    height: 12rem;
+  }
+  
+
+  
+}
+
+/* Desktop up to 767px */
+
+@media screen and (max-width: 767px) and (hover: hover){
+  /* General css */
+  h1{
+    font-size: 1.4rem;
+  }
+
+  .meme-container {
+    font-size: 0.9rem;
+  }
+
+  .core-box {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  i {
+    font-size: 0.9rem;
+  }
+
+  /* Choosing image expanded */
+  input:checked ~ label .meme-content img
+  {
+    width: auto;
+    height: 12rem;
+  }
+
+  /* Expanding image on hover */
+  .meme-unit:hover .meme-content img{
+    height: 12rem;
+  
+  }
+
+  /* text color change */
+   .meme-container:hover  label .meme-title {
+    color:black
+  }
+}
+
+
+
+/* Tablet up to 1023px */
+@media screen and (max-width: 1023px) and (min-width: 768px) and (hover: none){
+  h1{
+    font-size: 1.7rem;
+  }
+
+  .meme-container {
+    font-size: 1.2rem;
+  }
+
+
+  .core-box {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  i {
+    font-size: 1.4rem;
+  }
+
+  /* showing icons on cursor */
+  
+  .meme-container > .meme-unit .i-plus {
+    display: inline;
+  }
+  
+  /* Choosing image expanded */
+  input:checked ~ label .meme-content img
+  {
+    width: auto;
+    height: 20rem;
+  }
+  
+}
+
+/* Desktop up to 1023px */
+@media screen and (max-width: 1023px) and (min-width: 768px) and (hover:hover){
+  h1{
+    font-size: 1.7rem;
+  }
+
+  .meme-container {
+    font-size: 1.2rem;
+  }
+
+
+  .core-box {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  i {
+    font-size: 1.4rem;
+  }
+  
+  /* Choosing image expanded */
+  input:checked ~ label .meme-content img
+  {
+    width: auto;
+    height: 20rem;
+  }
+
+  /* Expanding image on hover */
+  .meme-unit:hover .meme-content img{
+    height: 20rem;
+  }
+
+  /* text color change */
+  .meme-container:hover  label .meme-title {
+    color:black
+  }
+}
+
+
+/* Desktop */
+@media screen and (min-width:1024px) and (hover:hover) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .meme-container {
+    font-size: 1.4rem;
+  }
+
+  .core-box {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  
+  /* Choosing image expanded */
+  input:checked ~ label .meme-content img
+  {
+    height: 28rem;
+  }
+   /* Expanding image on hover */
+   .meme-unit:hover .meme-content img{
+    height: 28rem;
+  }
+  
+   /* text color change */
+   .meme-container:hover  label .meme-title {
+    color:black
+  }
+}
