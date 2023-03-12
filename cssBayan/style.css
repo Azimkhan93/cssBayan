@@ -1,5 +1,12 @@
+/* General css */
+
+.meme-container {
+  font-weight: bold;
+}
+
 body {
   background-color: bisque;
+  font-size: 100%;
 }
 
 .core-box {
@@ -8,24 +15,58 @@ body {
 }
 
 section{
-  border-top: 2px solid grey;
+  border-top: 0.125rem solid grey;
 }
 
 .meme-content{
-  width: 390px; 
+  width: 100%; 
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
   
 }
 
-img{
-  height: auto;
+
+input[type=radio] {
+  display: none;
+}
+ 
+/* Putting icon to the right without float */
+
+.meme-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin:0
 }
 
-i {
-  font-size: 18px;
-  float: right;
+/* showing icons on cursor */
+
+.meme-container > .meme-unit .i-plus {
+  display: none;
 }
+
+.meme-container:hover > .meme-unit .i-plus {
+  display: inline;
+  
+}
+
+
+/* Rotating icons */
+
+.i-plus {
+  transition: transform 0.5s;
+  transition-timing-function: ease-in;
+  overflow: hidden;
+}
+
+.meme-unit input:checked ~ label .meme-title .i-plus,
+.meme-unit:hover  label .meme-title .i-plus{
+  transform: rotate(45deg);
+}
+
+
+ /*Image pop-up */
 
 .meme-content img {
   height: 0;
@@ -33,43 +74,36 @@ i {
   transition-timing-function: linear;
 }
 
-/* .meme-content.default img {
-  height: 350px
-} */
 
-input:checked ~ .meme-content img
+/* text color change */
+.meme-title,
+.meme-unit:active > label div.meme-title{
+  color:rgba(10, 10, 213, 0.978)
+}
+
+
+
+.meme-unit:checked ~ label .meme-title,
+input:checked + label .meme-title{
+ color:black
+}
+
+/* Cursor pointer */
+.meme-container,
+.meme-unit,
+.meme-content,
+.meme-title,
+img
 {
-  height: 350px
+  cursor:pointer;
 }
 
-input:checked,
-#s-one[checked] .meme-content img {
-  height: 0;
-  transition: height 0.5s;
-  transition-timing-function: linear;
+.meme-unit:active,
+.meme-container:active,
+.meme-unit:active,
+.meme-content:active,
+.meme-title:active,
+img:active {
+  opacity: 0.7;
+  cursor: grabbing
 }
-
-.meme-unit:hover .meme-content img{
-  height: 350px;
-  transition: height 0.5s;
-  transition-timing-function: linear;
-  overflow: hidden;
-}
-
-.meme-unit span.i-close,
-.meme-unit:hover span.i-plus {
-  display: none;
-}
-
-.meme-unit:hover span.i-close,
-.meme-unit span.i-plus {
-  display: inline;
-}
-
-
-
-input[type=radio] {
- appearance: none;
-}
-
-
